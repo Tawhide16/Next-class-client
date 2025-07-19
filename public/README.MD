@@ -30,6 +30,8 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 - 🏫 **Class Management:** Teachers can add, update, delete classes with admin approval  
 - 💳 **Stripe Integration:** Secure, seamless payment for class enrollments  
 - 📝 **Assignments & Feedback:** Teachers create assignments; students submit work and leave feedback  
+- 🔍 **Search & Pagination:** Efficient user and class management with server-side search and paginated tables  
+- 🔔 **Real-time Notifications:** User-friendly toasts and alerts for all CRUD and auth actions  
 
 
 ---
