@@ -25,6 +25,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 ## ✨ Key Features
 
 - 🎯 **Role-based Access:** Admin, Teacher, and Student dashboards with tailored functionalities  
+- 📱 **Responsive Design:** Mobile, tablet, and desktop friendly UI with smooth navigation  
 
 
 ---
