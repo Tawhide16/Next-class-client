@@ -33,7 +33,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 - 🔍 **Search & Pagination:** Efficient user and class management with server-side search and paginated tables  
 - 🔔 **Real-time Notifications:** User-friendly toasts and alerts for all CRUD and auth actions  
 - 🚀 **Optimized Data Fetching:** TanStack Query & Mutation for smooth API interactions  
-
+- 🎨 **Animations & UI:** Powered by Framer Motion & ShadCN UI for an engaging user experience
 
 ---
 
