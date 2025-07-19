@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "AI in Action",
+    "description": "Discover how AI is transforming the world.",
+    "thumbnail": "https://i.ibb.co/Mx2n8WGh/1693dcf9-d07a-45d0-89aa-974e605f49f2-cover.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Digital Marketing Mastery",
+    "description": "Crash course for modern marketers.",
+    "thumbnail": "https://i.ibb.co/FbQNt23z/6492f99f065b945bc7787c03-Digital-Marketing-Crash-Course-1920-1080-px-800-500-px.png"
+  },
+  {
+    "id": 3,
+    "name": "AI Chatbot Development",
+    "description": "Build your own smart assistant.",
+    "thumbnail": "https://i.ibb.co/nsfZxm4d/ai-chatbot-development.webp"
+  },
+  {
+    "id": 4,
+    "name": "Flutter App Dev",
+    "description": "From beginner to pro in mobile app dev.",
+    "thumbnail": "https://i.ibb.co/5XRYCtBD/App-Dev-with-Flutter-Regular-Batch-landscape-1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Cybersecurity Essentials",
+    "description": "Protect yourself in the digital world.",
+    "thumbnail": "https://i.ibb.co/8gmQYwgH/Cyber-Security-Essential.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Freelancing 101",
+    "description": "Be your own boss — learn freelancing.",
+    "thumbnail": "https://i.ibb.co/Pvx64Nhz/How-to-become-a-Freelancer.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Machine Learning Power",
+    "description": "Tap into the world of data science & ML.",
+    "thumbnail": "https://i.ibb.co/RkW9gf1F/unlock-the-power-of-machine-learning-in-data-science.webp"
+  },
+  {
+    "id": 8,
+    "name": "Visual Storytelling",
+    "description": "Make your stories pop with stunning visuals.",
+    "thumbnail": "https://i.ibb.co/b5TbwfJg/Visual-Storytelling-1280x640.jpg"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "OpenAI",
+    "description": "Empowering education with AI-driven learning tools and smart content delivery.",
+    "logo": "https://i.ibb.co/Wp7NbGgN/images-removebg-preview.png"
+  },
+  {
+    "id": 2,
+    "name": "Google Developer",
+    "description": "Supporting tech education through cloud, workshops, and training platforms.",
+    "logo": "https://i.ibb.co/LX6p0KS8/images-removebg-preview-1.png"
+  },
+  {
+    "id": 3,
+    "name": "Coursera",
+    "description": "Offering industry-recognized certification courses to boost student careers.",
+    "logo": "https://i.ibb.co/VYHDvVKs/4909838-middle-removebg-preview-3-removebg-preview.png"
+  },
+  {
+    "id": 4,
+    "name": "Microsoft Learn",
+    "description": "Collaborating on digital skill development and Microsoft certification pathways.",
+    "logo": "https://cdn-icons-png.flaticon.com/512/732/732221.png"
+  },
+  {
+    "id": 5,
+    "name": "Udemy",
+    "description": "Providing thousands of accessible online courses for students worldwide.",
+    "logo": "https://i.ibb.co/MqX76pT/channels4-profile-removebg-preview-1.png"
+  },
+  {
+    "id": 6,
+    "name": "IBM SkillsBuild",
+    "description": "Helping learners master data science, AI, and cybersecurity fundamentals.",
+    "logo": "https://i.ibb.co/s9B7FgQB/ibm-logo-removebg-preview.png"
+  }
+]
