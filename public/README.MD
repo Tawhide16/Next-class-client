@@ -44,6 +44,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 | React (Vite)        | Node.js + Express   | MongoDB (Native Driver) |
 | Tailwind CSS        | JWT Authentication  | Firebase Auth           |
 | ShadCN UI           | Stripe Payments     | Cloudinary / ImgBB      |
+| React Hook Form     | RESTful APIs        | Axios + Axios Interceptors |
 
 
 ---
