@@ -41,6 +41,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 
 | Frontend            | Backend             | Tools & Services        |
 |---------------------|---------------------|------------------------|
+| React (Vite)        | Node.js + Express   | MongoDB (Native Driver) |
 
 
 ---
