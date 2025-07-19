@@ -45,7 +45,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 | Tailwind CSS        | JWT Authentication  | Firebase Auth           |
 | ShadCN UI           | Stripe Payments     | Cloudinary / ImgBB      |
 | React Hook Form     | RESTful APIs        | Axios + Axios Interceptors |
-
+| TanStack Query      |                     | Framer Motion           |
 
 ---
 
