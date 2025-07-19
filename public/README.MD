@@ -18,7 +18,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 ---
 
 ## 🌐 Live Demo
-[Visit Live Site](https://your-live-site-link.com)  
+[Visit Live Site](https://my-school-b2c91.web.app/)  
 
 ---
 
