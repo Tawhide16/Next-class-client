@@ -28,6 +28,7 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 - 📱 **Responsive Design:** Mobile, tablet, and desktop friendly UI with smooth navigation  
 - 🔒 **Secure Auth:** Firebase Authentication + JWT tokens for protected routes  
 - 🏫 **Class Management:** Teachers can add, update, delete classes with admin approval  
+- 💳 **Stripe Integration:** Secure, seamless payment for class enrollments  
 
 
 ---
