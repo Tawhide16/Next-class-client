@@ -21,7 +21,10 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 [Visit Live Site](https://my-school-b2c91.web.app/)  
 
 ## 🔗 Repositories  
-[Client Side Code](https://github.com/Programming-Hero-Web-Course4/b11a12-client-side-Tawhide16)  
+[Client Side Code](https://github.com/Programming-Hero-Web-Course4/b11a12-client-side-Tawhide16)
+
+[Server Side Code](https://github.com/Programming-Hero-Web-Course4/b11a12-server-side-Tawhide16)    
+
 
  
 
