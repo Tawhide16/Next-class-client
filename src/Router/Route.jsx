@@ -24,6 +24,11 @@ import MyEnrollments from "../Component/Student/MyEnrollments";
 import PaymentHistory from "../Component/Payment/PaymentHistory";
 import MyEnrollClassDetails from "../../MyEnrollClassDetails";
 import ClassDetailsForTeacher from "../Pages/Teacher/ClassDetailsForTeacher";
+import AboutUs from "../Component/Home/AboutUs";
+import ContactUs from "../Component/Home/contactUs";
+import AllPaymentsChart from "../Admin/Overview";
+import Overview from "../Admin/Overview";
+
 
 
 
@@ -72,6 +77,15 @@ export const router = createBrowserRouter([
         Component: StripeCheckoutPage // where you mount CheckoutForm
       },
 
+      {
+        path:"aboutUs",
+        Component:AboutUs
+      },
+      {
+        path:"contactUs",
+        Component:ContactUs
+      }
+
     ]
   },
   {
@@ -90,6 +104,10 @@ export const router = createBrowserRouter([
       {
         path: "myProfile",
         Component: MyProfile
+      },
+      {
+        path: "allPaymentsChart",
+        Component:Overview
       },
       {
         path: "/dashboard/PaymentHistory",

@@ -5,6 +5,7 @@ import { Tooltip } from 'react-tooltip';
 import { FaHome, FaUserAlt } from 'react-icons/fa';
 import { MdBookmarkAdded, MdOutlineKingBed, MdPermContactCalendar } from 'react-icons/md';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
+import { FaInfoCircle, FaEnvelope } from "react-icons/fa";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -67,25 +68,57 @@ const NavBar = () => {
                 </NavLink>
             </li>
 
+            {user && (
+                <>
+                    <li>
+                        <NavLink
+                            to="/allClass"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-blue-500 font-semibold flex items-center gap-1"
+                                    : "hover:text-blue-400 flex items-center gap-1"
+                            }
+                        >
+                            <MdOutlineKingBed /> All Classes
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink
+                            to="/teacher"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-blue-500 font-semibold flex items-center gap-1"
+                                    : "hover:text-blue-400 flex items-center gap-1"
+                            }
+                        >
+                            <FaUserAlt /> ApplyAsTeacher
+                        </NavLink>
+                    </li>
+                </>
+            )}
             <li>
                 <NavLink
-                    to="/allClass"
+                    to="/aboutUs"
                     className={({ isActive }) =>
-                        isActive ? 'text-blue-500 font-semibold flex items-center gap-1' : 'hover:text-blue-400 flex items-center gap-1'
+                        isActive
+                            ? "text-blue-500 font-semibold flex items-center gap-1"
+                            : "hover:text-blue-400 flex items-center gap-1"
                     }
                 >
-                    <MdOutlineKingBed /> All Classes
+                    <FaInfoCircle /> About Us
                 </NavLink>
             </li>
-
             <li>
                 <NavLink
-                    to="/teacher"
+                    to="/contactUs"
                     className={({ isActive }) =>
-                        isActive ? 'text-blue-500 font-semibold flex it ems-center gap-1' : 'hover:text-blue-400 flex items-center gap-1'
+                        isActive
+                            ? "text-blue-500 font-semibold flex items-center gap-1"
+                            : "hover:text-blue-400 flex items-center gap-1"
                     }
                 >
-                    <FaUserAlt />  ApplyAsTeacher
+                    <FaEnvelope /> Contact Us
                 </NavLink>
             </li>
         </>
@@ -147,7 +180,7 @@ const NavBar = () => {
                                         <NavLink
                                             to="myProfile"
                                             className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition"
-                                            
+
                                         >
                                             My-Profile
                                         </NavLink>

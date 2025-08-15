@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import useAxios from '../../Hooks/UseAxios';
 import { motion } from 'framer-motion';
-import { FiShoppingCart } from 'react-icons/fi';
+import { FiShoppingCart, FiArrowUp, FiArrowDown } from 'react-icons/fi';
 
-// Now accepts page and limit for pagination
 const fetchApprovedClasses = async (axiosSecure, page, limit) => {
   const res = await axiosSecure.get(`/api/classes/approved?page=${page}&limit=${limit}`);
   return res.data;
@@ -15,35 +14,46 @@ const AllClassDetails = () => {
   const axiosSecure = useAxios();
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
-  const limit = 10; // how many classes per page
+  const limit = 10;
   const [totalPages, setTotalPages] = useState(1);
   const [totalEnrolledMap, setTotalEnrolledMap] = useState({});
+  const [sort, setSort] = useState(null); // null, 'asc', or 'desc'
 
-  // React Query with page dependency so it refetches when page changes
   const {
-    data,
+    data: originalData,
     isLoading,
     isError,
     refetch,
   } = useQuery({
     queryKey: ['approved-classes', page],
     queryFn: () => fetchApprovedClasses(axiosSecure, page, limit),
-    keepPreviousData: true, // smooth UI when switching pages
+    keepPreviousData: true,
   });
+
+  // Sort the data client-side
+  const sortedData = useMemo(() => {
+    if (!originalData?.data) return [];
+    
+    return [...originalData.data].sort((a, b) => {
+      if (sort === 'asc') return a.price - b.price;
+      if (sort === 'desc') return b.price - a.price;
+      return 0; // No sorting
+    });
+  }, [originalData, sort]);
 
   // Update total pages when data arrives
   useEffect(() => {
-    if (data?.totalPages) {
-      setTotalPages(data.totalPages);
+    if (originalData?.totalPages) {
+      setTotalPages(originalData.totalPages);
     }
-  }, [data]);
+  }, [originalData]);
 
   // Fetch enrollment counts for the current page's classes
   useEffect(() => {
     const fetchTotalEnrollmentsForAll = async () => {
       try {
         const updatedMap = {};
-        for (const cls of data?.data || []) {
+        for (const cls of sortedData) {
           const res = await axiosSecure.get(`/api/enrollments/count/${cls._id}`);
           updatedMap[cls._id] = res.data.count || 0;
         }
@@ -52,32 +62,55 @@ const AllClassDetails = () => {
         console.error("Error fetching total enrolled for all classes:", err);
       }
     };
-    if (data?.data?.length > 0) {
+    if (sortedData.length > 0) {
       fetchTotalEnrollmentsForAll();
     }
-  }, [data, axiosSecure]);
-
-  // Refetch on tab focus
-  useEffect(() => {
-    const handleFocus = () => refetch();
-    window.addEventListener('focus', handleFocus);
-    return () => window.removeEventListener('focus', handleFocus);
-  }, [refetch]);
+  }, [sortedData, axiosSecure]);
 
   const handleEnroll = (cls) => {
     navigate(`/class/${cls._id}/details`);
+  };
+
+  const handleSort = (sortType) => {
+    // Toggle if clicking the same sort button
+    if (sort === sortType) {
+      setSort(null);
+    } else {
+      setSort(sortType);
+    }
   };
 
   if (isLoading) return <p className="text-center text-xl">Loading...</p>;
   if (isError) return <p className="text-center text-red-600">Failed to load classes.</p>;
 
   return (
-    <div className=" mx-auto px-15 py-8 mt-15 my-10">
+    <div className="mx-auto px-15 py-8 mt-15 my-10">
       <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
-        All Approved Classes
+        All Classes
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6">
-        {(data?.data || []).map((cls) => (
+      
+      {/* Sorting Controls */}
+      <div className="flex justify-end mb-6 gap-4">
+        <button
+          onClick={() => handleSort('asc')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-md font-semibold ${
+            sort === 'asc' ? 'bg-indigo-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white'
+          }`}
+        >
+          <FiArrowUp /> Price: Low to High
+        </button>
+        <button
+          onClick={() => handleSort('desc')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-md font-semibold ${
+            sort === 'desc' ? 'bg-indigo-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white'
+          }`}
+        >
+          <FiArrowDown /> Price: High to Low
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {sortedData.map((cls) => (
           <motion.div
             key={cls._id}
             initial={{ opacity: 0, y: 30 }}

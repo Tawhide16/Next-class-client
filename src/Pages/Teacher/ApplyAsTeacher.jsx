@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../../src/Provider/AuthProvider';
 import Swal from 'sweetalert2';
@@ -17,6 +17,30 @@ const ApplyAsTeacher = () => {
     category: 'Web Development',
   });
 
+  const [teacherStatus, setTeacherStatus] = useState('loading'); // Default 'loading'
+
+  // Fetch teacher status
+  useEffect(() => {
+    const fetchStatus = async () => {
+      if (!user?.email) {
+        setTeacherStatus(null);
+        return;
+      }
+
+      try {
+        const res = await axios.get(
+          `https://b11a12-server-side-tawhide16.vercel.app/api/teachers/status/${user.email}`
+        );
+        setTeacherStatus(res.data.status || null); // Example: "accepted", "pending", or null
+      } catch (err) {
+        console.error('Error fetching teacher status:', err);
+        setTeacherStatus(null);
+      }
+    };
+
+    fetchStatus();
+  }, [user?.email]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -31,10 +55,12 @@ const ApplyAsTeacher = () => {
     };
 
     try {
-      const res = await axios.post('https://b11a12-server-side-tawhide16.vercel.app/api/teachers', teacherData);
+      const res = await axios.post(
+        'https://b11a12-server-side-tawhide16.vercel.app/api/teachers',
+        teacherData
+      );
       console.log(res.data);
 
-      // Show success alert
       Swal.fire({
         icon: 'success',
         title: 'Application Submitted!',
@@ -42,13 +68,14 @@ const ApplyAsTeacher = () => {
         confirmButtonColor: '#3085d6',
       });
 
-      // Optionally reset form or fields
       setFormData((prev) => ({
         ...prev,
         title: '',
         experience: 'beginner',
         category: 'Web Development',
       }));
+
+      setTeacherStatus('pending');
     } catch (err) {
       console.error(err);
       toast.error('Something went wrong 🥲', {
@@ -60,10 +87,8 @@ const ApplyAsTeacher = () => {
 
   return (
     <div className="max-w-xl mx-auto p-6 md:p-10 bg-white dark:bg-gray-900 shadow-xl rounded-xl mt-25 my-10 transition-all duration-300">
-      {/* Toast Container */}
       <ToastContainer />
-    
-      {/* Profile Image */}
+
       <div className="flex justify-center mb-6">
         <div className="w-28 h-28 md:w-32 md:h-32 rounded-full border-4 border-blue-500 dark:border-blue-400 overflow-hidden shadow-md">
           <img
@@ -129,12 +154,24 @@ const ApplyAsTeacher = () => {
           <option value="Cyber Security">Cyber Security</option>
         </select>
 
-        <button
-          type="submit"
-          className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-300 shadow-md"
-        >
-          Submit for Review
-        </button>
+        {/* Conditionally render button or message */}
+        {teacherStatus === 'accepted' ? (
+          <p className="text-green-600 text-center font-semibold">
+            You're already a teacher.
+          </p>
+        ) : (
+          <button
+            type="submit"
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-300 shadow-md disabled:opacity-60"
+            disabled={teacherStatus === 'pending' || teacherStatus === 'loading'}
+          >
+            {teacherStatus === 'pending'
+              ? 'Application Under Review'
+              : teacherStatus === 'loading'
+              ? 'Loading...'
+              : 'Submit'}
+          </button>
+        )}
       </form>
     </div>
   );

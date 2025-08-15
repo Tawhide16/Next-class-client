@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FiHome, FiPackage, FiCreditCard, FiMapPin, FiUser, FiClock, FiCheckCircle } from 'react-icons/fi';
-import { MdClass, MdOutlineJoinRight, MdSportsMotorsports } from 'react-icons/md';
+import { MdClass, MdDashboard, MdOutlineJoinRight, MdSportsMotorsports } from 'react-icons/md';
 import { GrUserAdmin } from 'react-icons/gr';
 import useAdmin from '../Hooks/useAdmin';
 import { AuthContext } from '../Provider/AuthProvider';
@@ -108,6 +108,17 @@ const DashBoard = () => {
                                 >
                                     <FiCheckCircle size={20} />
                                      Pending-Class
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="allPaymentsChart"
+                                    className={({ isActive }) =>
+                                        `flex items-center gap-3 px-4 py-2 rounded-md hover:bg-base-300 transition-colors ${isActive ? 'bg-primary text-white' : ''}`
+                                    }
+                                >
+                                    <MdDashboard className="text-xl" />
+                                     Overview
                                 </NavLink>
                             </li>
                         </>

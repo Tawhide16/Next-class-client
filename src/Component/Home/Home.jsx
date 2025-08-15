@@ -9,6 +9,7 @@ import StatsOverview from './StatsOverview';
 import TopEnrolledClasses from './TopEnrolledClasses';
 import FeedbackCarousel from './FeedbackCarousel';
 import Gemini from './Gemini';
+import SpecialEvents from './SpecialEvents';
 
 const Home = () => {
     const data = useLoaderData()
@@ -22,6 +23,7 @@ const Home = () => {
             <StatsOverview></StatsOverview>
             <FeedbackCarousel></FeedbackCarousel>
             <OurMission></OurMission>
+            <SpecialEvents></SpecialEvents>
             <FAQSection></FAQSection>
         </div>
     );
