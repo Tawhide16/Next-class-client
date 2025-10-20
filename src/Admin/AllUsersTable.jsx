@@ -7,11 +7,12 @@ const AllUsersTable = () => {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // ✅ Pagination state
+  // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  // ✅ Fetch Users
+  // Fetch Users
+
   const fetchUsers = async (searchTerm = '') => {
     setLoading(true);
     try {
