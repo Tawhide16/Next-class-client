@@ -12,6 +12,8 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import StripeProvider from './Provider/StripeProvider.jsx';
 import { queryClient } from './queryClient.jsx';
  // এই ফাইলটা বানাস নাই? উপরে বলছি কিভাবে বানাবি
+ 
+ // এই ফাইলটা বানাস নাই? উপরে বলছি কিভাবে বানাবি
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
