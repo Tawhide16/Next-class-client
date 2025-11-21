@@ -64,14 +64,14 @@ const StatsOverview = () => {
       .catch(err => console.error('Animation load failed:', err));
   }, []);
 
-  
+  // Fetch stats from backend
   useEffect(() => {
     axios.get('https://b11a12-server-side-tawhide16.vercel.app/api/stats')
       .then(res => setStats(res.data))
       .catch(err => console.error('Failed to fetch stats:', err));
   }, []);
 
-  // Counter animation effect
+  
   useEffect(() => {
     const duration = 2000;
     const startTime = Date.now();
