@@ -82,7 +82,7 @@ const FeedbackCarousel = () => {
                   className="w-16 h-16 rounded-full mx-auto mb-4 border"
                 />
 
-             
+                {/* Rating */}
                 <Rating
                   value={feedback.rating}
                   readOnly
