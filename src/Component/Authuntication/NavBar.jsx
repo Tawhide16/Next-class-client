@@ -13,12 +13,7 @@ const NavBar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef();
 
-    // Toggle theme light/dark & save in localStorage
-    const toggleTheme = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
+
 
     // Load theme from localStorage or system preference
     useEffect(() => {
@@ -68,8 +63,6 @@ const NavBar = () => {
                 </NavLink>
             </li>
 
-            {user && (
-                <>
                     <li>
                         <NavLink
                             to="/allClass"
@@ -95,8 +88,7 @@ const NavBar = () => {
                             <FaUserAlt /> ApplyAsTeacher
                         </NavLink>
                     </li>
-                </>
-            )}
+
             <li>
                 <NavLink
                     to="/aboutUs"
