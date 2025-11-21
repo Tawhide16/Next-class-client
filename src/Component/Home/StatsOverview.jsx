@@ -64,7 +64,7 @@ const StatsOverview = () => {
       .catch(err => console.error('Animation load failed:', err));
   }, []);
 
-  // Fetch stats from backend
+  
   useEffect(() => {
     axios.get('https://b11a12-server-side-tawhide16.vercel.app/api/stats')
       .then(res => setStats(res.data))
