@@ -38,7 +38,7 @@ const SpecialEvents = () => {
 
   return (
     <section className="bg-gray-50 dark:bg-gray-800 py-16 px-6 my-10 rounded-2xl">
-      <Toaster /> 
+      <Toaster /> {/* Toast container */}
 
       <div className="max-w-6xl mx-auto text-center">
         {/* Title */}
