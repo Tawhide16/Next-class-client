@@ -89,7 +89,7 @@ const FeedbackCarousel = () => {
                   style={{ maxWidth: 150, margin: '0 auto' }}
                 />
 
-               
+                {/* Feedback Description */}
                 <p className="text-gray-700 dark:text-gray-300 mt-4 text-lg italic">
                   "{feedback.description}"
                 </p>
