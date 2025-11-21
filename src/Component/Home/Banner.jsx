@@ -119,7 +119,7 @@ const Banner = ({ data }) => {
             </div>
           ))}
 
-          {/* Progress bar */}
+          
           <div className="absolute bottom-2 left-0 w-full h-1 bg-gray-700">
             <div
               ref={progressRef}
