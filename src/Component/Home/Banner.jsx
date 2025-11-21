@@ -10,7 +10,7 @@ const Banner = ({ data }) => {
   const progressRef = useRef(null);
   const intervalRef = useRef(null);
 
-  
+  // Start or restart autoplay + progress bar animation
   const startAutoplay = () => {
     if (progressRef.current) {
       progressRef.current.style.transition = 'none';
