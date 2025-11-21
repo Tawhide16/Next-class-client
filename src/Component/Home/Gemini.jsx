@@ -94,7 +94,7 @@ export default function Gemini() {
         )}
       </button>
 
-      {/* Chat Window */}
+    
       <div
         className={`fixed bottom-24 right-8 w-[calc(100vw-4rem)] max-w-md h-[70vh] bg-gray-800 text-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 ease-in-out z-40 ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
