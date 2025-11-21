@@ -71,7 +71,7 @@ const StatsOverview = () => {
       .catch(err => console.error('Failed to fetch stats:', err));
   }, []);
 
-  
+  // Counter animation effect
   useEffect(() => {
     const duration = 2000;
     const startTime = Date.now();
