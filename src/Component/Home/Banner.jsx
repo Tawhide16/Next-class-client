@@ -98,7 +98,7 @@ const Banner = ({ data }) => {
                 className="w-full h-full object-cover"
                 alt={event.title || 'Event Image'}
                 loading={index === 0 ? 'eager' : 'lazy'}
-                onError={(e) => (e.target.src = '/fallback.jpg')} // optional fallback image
+                onError={(e) => (e.target.src = '/fallback.jpg')} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
               <div
