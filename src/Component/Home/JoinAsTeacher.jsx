@@ -52,7 +52,7 @@ const JoinAsTeacher = () => {
           <div className="absolute -inset-4 bg-blue-100 dark:bg-blue-900 rounded-2xl opacity-20 -z-10"></div>
         </motion.div>
 
-        {/* Right content */}
+        
         <motion.div
           className="w-full lg:w-1/2 text-center lg:text-left"
           variants={fadeInRight}
