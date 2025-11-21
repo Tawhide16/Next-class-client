@@ -33,7 +33,7 @@ const JoinAsTeacher = () => {
     <section className="bg-gradient-to-br from-gray-50 via-gray-50 to-gray-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 py-16 overflow-hidden transition-colors duration-300 rounded-2xl">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
 
-        
+        {/* Left image */}
         <motion.div
           className="w-full lg:w-1/2 relative"
           variants={fadeInLeft}
