@@ -69,7 +69,7 @@ const OurMission = () => {
       viewport={{ once: true, margin: "0px 0px -100px 0px" }}
       className="relative py-15 my-15 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800 overflow-hidden"
     >
-      {/* Decorative elements */}
+
       <div className="absolute inset-0 opacity-10 dark:opacity-5">
         <div className="absolute top-20 left-20 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-60 h-60 bg-purple-400 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"></div>
