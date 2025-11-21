@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-
+// Gemini component
 export default function Gemini() {
   // State variables
   const [isOpen, setIsOpen] = useState(false); // Controls chat window visibility
