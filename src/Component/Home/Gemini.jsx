@@ -105,7 +105,7 @@ export default function Gemini() {
           <h2 className="text-xl font-bold text-center text-cyan-400">My School ChatBot</h2>
         </div>
 
-        {/* Chat Messages */}
+  
         <div className="flex-1 p-6 overflow-y-auto">
           <div className="space-y-6">
             {messages.length === 0 && (
