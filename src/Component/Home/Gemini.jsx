@@ -100,7 +100,7 @@ export default function Gemini() {
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}
       >
-        {/* Header */}
+       
         <div className="p-4 border-b border-gray-700">
           <h2 className="text-xl font-bold text-center text-cyan-400">My School ChatBot</h2>
         </div>
