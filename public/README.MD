@@ -5,6 +5,8 @@
 
 ---
 
+## 🚀 Project Overview
+EduManage is a **robust, scalable, and user-friendly** MERN stack application designed to streamline interactions between educational institutions, tutors, and students. From managing classes and assignments to handling payments and feedback, EduManage empowers every user with seamless experiences across devices.
 
 ---
 
