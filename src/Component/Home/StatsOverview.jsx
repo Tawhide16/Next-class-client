@@ -56,7 +56,7 @@ const StatsOverview = () => {
     enrollments: 0
   });
 
- 
+  // Fetch animation JSON
   useEffect(() => {
     fetch('/Graduation Hat.json')
       .then(res => res.json())
