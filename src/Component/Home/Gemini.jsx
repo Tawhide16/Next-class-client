@@ -48,7 +48,8 @@ export default function Gemini() {
 
       const data = await response.json();
       
-      
+      // *** ERROR HANDLING IMPROVEMENT ***
+      // Check if the response has the expected structure before accessing it
       if (data.candidates && data.candidates.length > 0 && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts.length > 0) {
         const aiResponse = data.candidates[0].content.parts[0].text;
         const newAiMessage = { role: 'ai', text: aiResponse };
