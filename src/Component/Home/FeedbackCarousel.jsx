@@ -75,7 +75,7 @@ const FeedbackCarousel = () => {
                   ${index === activeIndex ? '' : 'blur-sm opacity-50 scale-90'}
                 `}
               >
-                {/* Student Image */}
+              
                 <img
                   src={feedback.studentImage || 'https://i.ibb.co/4pDNDk1/avatar.png'}
                   alt={feedback.studentEmail || 'Student'}
