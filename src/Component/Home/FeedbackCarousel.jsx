@@ -94,7 +94,7 @@ const FeedbackCarousel = () => {
                   "{feedback.description}"
                 </p>
 
-                
+                {/* Student Email */}
                 <p className="text-sm text-gray-500 mt-2">
                   — {feedback.studentEmail || 'Anonymous'}
                 </p>
