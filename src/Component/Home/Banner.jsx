@@ -54,7 +54,7 @@ const Banner = ({ data }) => {
     };
   }, [totalSlides, isHovered]);
 
-  
+  // When slide changes manually, reset progress and restart autoplay
   const goToSlide = (index) => {
     setCurrentSlide(index);
     startAutoplay();
