@@ -60,7 +60,6 @@ const FAQSection = () => {
           </p>
         </motion.div>
 
-        {/* FAQ Items */}
         <motion.div 
           className="max-w-3xl mx-auto space-y-4"
           initial="hidden"
