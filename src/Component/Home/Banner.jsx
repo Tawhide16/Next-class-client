@@ -48,7 +48,7 @@ const Banner = ({ data }) => {
       stopAutoplay();
     }
 
-
+    // Cleanup on unmount
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
