@@ -128,7 +128,7 @@ const Banner = ({ data }) => {
             />
           </div>
 
-        
+          {/* Navigation Arrows */}
           <button
             onClick={goToPrevSlide}
             className="absolute left-8 top-1/2 -translate-y-1/2 btn btn-circle btn-ghost text-white bg-black/50 hover:bg-black/70 backdrop-blur-sm transition-all z-20 w-16 h-16 hover:scale-110"
