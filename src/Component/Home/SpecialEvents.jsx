@@ -28,7 +28,7 @@ const SpecialEvents = () => {
     },
   ];
 
-  // Toast handler
+
   const handleLearnMore = (title) => {
     toast.success(`More details about "${title}" coming soon!`, {
       duration: 3000,
