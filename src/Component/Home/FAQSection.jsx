@@ -41,7 +41,7 @@ const FAQSection = () => {
       className="py-15 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-       
+        {/* Header */}
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
