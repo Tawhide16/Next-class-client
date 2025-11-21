@@ -55,7 +55,7 @@ export default function Gemini() {
         const newAiMessage = { role: 'ai', text: aiResponse };
         setMessages(prevMessages => [...prevMessages, newAiMessage]);
       } else {
-        // Handle cases where the response is valid but doesn't contain content (e.g., safety blocks)
+       
         console.error("Invalid response structure from API:", data);
         if (data.promptFeedback) {
              throw new Error(`Apnar proshno-ti policy karone block kora hoyeche. Reason: ${data.promptFeedback.blockReason}`);
