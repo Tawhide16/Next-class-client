@@ -75,7 +75,7 @@ export default function Gemini() {
 
   return (
     <>
-      
+      {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-8 right-8 bg-cyan-600 text-white p-4 rounded-full shadow-lg hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 transition-transform duration-200 ease-in-out hover:scale-110 z-50"
