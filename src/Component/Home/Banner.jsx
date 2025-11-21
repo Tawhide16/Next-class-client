@@ -30,7 +30,7 @@ const Banner = ({ data }) => {
     }, 5000);
   };
 
-  // Pause autoplay and clear interval
+
   const stopAutoplay = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     if (progressRef.current) {
