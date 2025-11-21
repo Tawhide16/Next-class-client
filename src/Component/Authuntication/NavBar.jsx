@@ -122,7 +122,7 @@ const NavBar = () => {
                 {/* Logo + Website name */}
                 <NavLink to="/" className="flex items-center  text-2xl font-bold text-[#0B2545] dark:text-white select-none">
                     <img
-                        src="/logo.png" // Replace with your logo path
+                        src="/logo.png" 
                         alt="school-Logo"
                         className="w-14 h-14 rounded mt-3"
                         style={{
