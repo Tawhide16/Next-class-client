@@ -161,7 +161,7 @@ const Banner = ({ data }) => {
           </button>
         </div>
 
-        {/* Indicators */}
+        
         <div className="flex justify-center w-full py-6 gap-3">
           {slides.map((_, index) => (
             <button
