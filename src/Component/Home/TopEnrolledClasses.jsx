@@ -15,7 +15,7 @@ const TopEnrolledClasses = () => {
       try {
         const res = await axiosSecure.get('/api/classes/approved');
 
-     
+        // 🧠 Defensive check for proper array
         const approvedClasses = Array.isArray(res.data)
           ? res.data
           : res.data?.data || res.data?.classes || [];
