@@ -23,7 +23,7 @@ const CheckoutForm = ({ classInfo, user }) => {
   const [isPaid, setIsPaid] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // ✅ Check if already enrolled
+
   useEffect(() => {
     const checkEnrollment = async () => {
       if (!user?.email || !classId) return;
