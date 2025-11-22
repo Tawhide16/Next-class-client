@@ -20,7 +20,7 @@ const TopEnrolledClasses = () => {
           ? res.data
           : res.data?.data || res.data?.classes || [];
 
-        // 🔁 Now fetch totalEnrolled for each class
+       
         const classesWithCount = await Promise.all(
           approvedClasses.map(async (cls) => {
             try {
