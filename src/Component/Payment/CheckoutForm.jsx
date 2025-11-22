@@ -61,7 +61,7 @@ const CheckoutForm = ({ classInfo, user }) => {
     setLoading(true);
 
     try {
-      
+      // Step 1: Get Payment Intent
       const { data } = await axiosSecure.post('/api/create-payment-intent', {
         price,
       });
