@@ -9,7 +9,7 @@ import { FiLoader, FiAlertCircle } from 'react-icons/fi';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
-// ✅ Load your public Stripe key from .env
+
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 const StripeCheckoutPage = () => {
