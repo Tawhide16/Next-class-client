@@ -7,7 +7,7 @@ const PaymentHistory = () => {
   const axios = useAxios();
   const { user } = useContext(AuthContext);
 
- 
+  // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
