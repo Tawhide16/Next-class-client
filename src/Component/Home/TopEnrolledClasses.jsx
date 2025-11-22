@@ -38,7 +38,7 @@ const TopEnrolledClasses = () => {
           })
         );
 
-        // 🔥 Sort and limit top 4
+      
         const sorted = classesWithCount
           .sort((a, b) => b.totalEnrolled - a.totalEnrolled)
           .slice(0, 4);
