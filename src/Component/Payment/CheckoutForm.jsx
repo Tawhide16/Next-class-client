@@ -80,7 +80,7 @@ const CheckoutForm = ({ classInfo, user }) => {
       if (result.error) {
         Swal.fire('Error', result.error.message, 'error');
       } else if (result.paymentIntent.status === 'succeeded') {
-       
+        // Step 3: Save to Enrollments DB
         const enrollData = {
           studentName: user?.displayName,
           studentEmail: user?.email,
