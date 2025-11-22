@@ -9,7 +9,7 @@ const CheckoutForm = ({ classInfo, user }) => {
   const stripe = useStripe();
   const elements = useElements();
   const axiosSecure = useAxios();
-   const navigate = useNavigate(); // 🧭 init
+   const navigate = useNavigate(); 
 
   const {
     title,
