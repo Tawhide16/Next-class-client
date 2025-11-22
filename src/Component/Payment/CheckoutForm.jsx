@@ -47,7 +47,7 @@ const CheckoutForm = ({ classInfo, user }) => {
     checkEnrollment();
   }, [user?.email, classId, axiosSecure]);
 
- 
+  // ✅ Stripe Payment Handler
   const handleSubmit = async (e) => {
     e.preventDefault();
 
