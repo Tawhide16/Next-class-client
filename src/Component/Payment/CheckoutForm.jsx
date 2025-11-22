@@ -66,7 +66,7 @@ const CheckoutForm = ({ classInfo, user }) => {
         price,
       });
 
-    
+      // Step 2: Confirm Card Payment
       const result = await stripe.confirmCardPayment(data.clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
