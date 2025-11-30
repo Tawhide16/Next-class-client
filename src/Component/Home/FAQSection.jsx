@@ -93,7 +93,7 @@ const FAQSection = () => {
               <motion.div
                 onClick={() => toggleFAQ(index)}
                 whileHover={{ scale: 1.02 }}
-                className={`cursor-pointer p-6 rounded-xl shadow-md dark:shadow-none transition-all duration-300 ${activeIndex === index ? 'bg-white dark:bg-gray-900/80 border border-gray-200 dark:border-gray-700' : 'bg-white/80 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-900/70'}`}
+                className={`cursor-pointer p-6 rounded-xl shadow-md dark:shadow-none transition-all duration-300 ${activeIndex === index ? 'bg-white dark:bg-gray-900/80 border border-gray-200 dark:border-gray-700' : 'bg-white/80 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-900/70 rounded-b-2xl'}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
