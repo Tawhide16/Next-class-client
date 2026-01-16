@@ -14,6 +14,10 @@ EduManage is a **robust, scalable, and user-friendly** MERN stack application de
 | Role   | Email               | Password  |
 |--------|---------------------|-----------|
 | Admin  | `boss123@gmail.com` | `boss123` |
+## 🔑 Admin Credentials
+| Role   | Email               | Password  |
+|--------|---------------------|-----------|
+| Admin  | `boss123@gmail.com` | `boss123` |
 
 ---
 
