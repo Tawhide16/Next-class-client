@@ -20,7 +20,6 @@ const MyEnrollments = () => {
   const [terImage, setTerImage] = useState(null); // ✅ Added for image upload
 
   // Pagination state
-  // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
